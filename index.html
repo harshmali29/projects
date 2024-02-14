@@ -2,467 +2,672 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- customc css -->
+    <link rel="stylesheet" href="./assest/css/stlye.css">
+    <!-- .fontawsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- silck silder cdn -->
+    <link rel="stylesheet" href="https://rawgit.com/kenwheeler/slick/master/slick/slick.css">
+    <link rel="stylesheet" href="https://rawgit.com/kenwheeler/slick/master/slick/slick-theme.css">
+
+    <!-- silder-2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
 </head>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif, arial;
-        box-sizing: border-box;
-    }
-
-    body {
-        background-color: #2c343b;
-        font-size: 1em;
-        color: #fff;
-        overflow-x: hidden;
-    }
-
-    p {
-        text-align: justify;
-        font-family: 'geneva';
-        line-height: 1.5em;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Monaco', 'arial';
-        font-weight: 800;
-        text-transform: uppercase;
-        margin-bottom: 50px;
-    }
-
-    #container {
-        width: 100%;
-    }
-
-    header {
-        text-align: center;
-    }
-
-    header img {
-        width: 45px;
-    }
-
-    nav {
-        width: 100%;
-        margin: 0;
-        padding: 5px 0;
-        text-align: center;
-        background-color: #fff;
-    }
-
-    nav ul {
-        padding: 0px;
-        display: inline-block;
-        margin: 0px;
-    }
-
-    nav li {
-        display: block;
-        padding: 10px 0;
-    }
-
-    nav a {
-        color: #000;
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 0.9em;
-        text-transform: uppercase;
-    }
-
-    a:visited {
-        color: #000;
-    }
-
-    nav a:hover {
-        background: rgba(220, 220, 220, 0.5);
-        padding: 16px 15px;
-    }
-
-    .tagline {
-        text-align: center;
-        padding: 80px 20px;
-        background-image: url("https://s-media-cache-ak0.pinimg.com/736x/34/ac/e5/34ace5629b83681632bf38dd13c40ca7.jpg");
-        background-size: 100%;
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        color: #000;
-    }
-
-    .tagline h1 {
-        text-transform: uppercase;
-        font-size: 2.2em;
-        font-weight: 800;
-        margin: 25px auto;
-        width: 375px;
-    }
-
-    .tagline h2 {
-        font-size: 1.6em;
-        font-weight: 300;
-        margin: 0 auto 50px;
-        width: 355px;
-        text-align: right;
-    }
-
-    a.button {
-        display: block;
-        margin: 0 auto;
-        height: 60px;
-        width: 355px;
-        line-height: 60px;
-        color: #fff;
-        text-decoration: none;
-        background: -webkit-linear-gradient(#ccc 50%, #fff 100%);
-        background: -o-linear-gradient(#f85032 50%, #c00 100%);
-        background: linear-gradient(#f85032 50%, #c00 100%);
-    }
-
-    a.button:hover,
-    a.button:focus {
-        font-weight: bold;
-        transition: 0.4s;
-    }
-
-    a.button:active {
-        position: relative;
-        bottom: 1px;
-    }
-
-    #mainContainer {
-        width: 100%;
-    }
-
-    #mainContainer h3 {
-        color: #fff;
-    }
-
-    .rowoftwo {
-        width: 100%;
-        padding: 40px 20px;
-        margin: 0;
-        color: #000;
-    }
-
-    .twocolumn {
-        background-color: #ccc;
-        padding: 40px;
-    }
-
-    .rowofthree {
-        width: 100%;
-        padding: 40px 20px;
-        margin: 0;
-        color: #fff;
-    }
-
-    .threecolumn {
-        background-color: #2c343b;
-        padding: 40px;
-    }
-
-    .fourcolumn {
-        padding: 40px;
-        background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-        background-repeat: repeat;
-    }
-
-    .rowoffour {
-        float: left;
-        width: 50%;
-        padding: 40px;
-    }
-
-    .rowoffour img {
-        width: 100%;
-        max-height: 195px;
-        border: 2px solid #fff;
-    }
-
-    .projectrowL,
-    .projectrowR {
-        max-width: 100%;
-        padding: 40px;
-    }
-
-    .projectcolumn {
-        width: 100%;
-        padding: 40px 20px;
-        margin: 0;
-        background-color: white;
-        color: #000;
-    }
-
-    .projectcolumn a {
-        text-decoration: none;
-        color: #E65B53;
-        font-weight: 700;
-        float: right;
-        display: block;
-    }
-
-    .projectcolumn a:hover {
-        text-decoration: underline;
-    }
-
-    /* full view */
-    @media screen and (min-width:1120px) {
-        header {
-            position: relative;
-            text-align: center;
-            padding: 0px 0;
-        }
-
-        header img {
-            position: absolute;
-            top: -6px;
-            left: 20px;
-        }
-
-        #mainContainer {
-            width: 100%;
-        }
-
-        .twocolumn {
-            width: 100%;
-            clear: both;
-            float: left;
-        }
-
-        .twocolumn:before,
-        .twocolumn:after {
-            content: " ";
-            display: table;
-        }
-
-        .twocolumn:after {
-            clear: both;
-        }
-
-        .rowoftwo {
-            width: 46%;
-            float: left;
-            margin: 2%;
-        }
-
-        .threecolumn {
-            width: 100%;
-            clear: both;
-            float: left;
-        }
-
-        .threecolumn:before,
-        .threecolumn:after {
-            content: " ";
-            display: table;
-        }
-
-        .threecolumn:after {
-            clear: both;
-        }
-
-        .rowofthree {
-            width: 29%;
-            float: left;
-            margin: 2%;
-        }
-
-        .fourcolumn {
-            width: 100%;
-            clear: both;
-        }
-
-        .fourcolumn:before,
-        .fourcolumn:after {
-            content: " ";
-            display: table;
-        }
-
-        .fourcolumn:after {
-            clear: both;
-        }
-
-        .rowoffour {
-            width: 24%;
-            margin: 0.5%;
-            float: left;
-        }
-
-        .projectcolumn {
-            width: 100%;
-            clear: both;
-            float: left;
-        }
-
-        .projectcolumn:before,
-        .projectcolumn:after {
-            content: " ";
-            display: table;
-        }
-
-        .projectcolumn:after {
-            clear: both;
-        }
-
-        .projectrowL {
-            width: 55%;
-            float: left;
-            margin: 2%;
-        }
-
-        .projectrowR {
-            width: 37%;
-            float: left;
-            margin: 2%;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 15px;
-            padding: 0;
-        }
-
-        nav {
-            padding: 0;
-        }
-    }
-
-
-    footer {
-        box-sizing: border-box;
-        background: #2c343b;
-        clear: both;
-        height: 40px;
-        padding: 12px 20px;
-        color: #ccc;
-        font-size: 0.8em;
-    }
-</style>
-
 <body>
-    <div id="container">
-        <header>
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/3/39/Pomegranate_drawing_with_transparent_background.png">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="mainContainer">
+    <!-- .header-start -->
+    <header>
+        <div class="box">
+            <div class="nav">
+                <div class="conatiner">
+                    <div class="row justify align">
+                        <div class="col">
+                            <div class="logo">
+                                <img src="./assest/img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="main-tx">
+                                <ul>
+                                    <li><a href="">home</a></li>
+                                    <li><a href=""> about</a></li>
+                                    <li><a href="">services</a></li>
+                                    <li><a href="">news</a></li>
+                                    <li><a href="">contact us</a></li>
+                                    <li><a href=""><i class="fa-solid fa-user"></i>login</a></li>
+                                    <li><i class="fa-solid fa-magnifying-glass"></i>
+                                    <li>
+                                </ul>
+                            </div>
 
-            <div class="tagline">
-                <div class="taglinerow">
-                    <h1>beyond the future</h1>
-                    <h2>...evolution</h2>
-                    <a href="" class="button">Explore our products</a>
+                            <div class="bar">
+                                <i class="fa-solid fa-2 fa-bars"></i>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
             </div>
 
-            <div class="twocolumn">
-                <div class="rowoftwo">
-                    <h2>Strategy</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero elit. Facere a enim perspiciatis nobis
-                        rem odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis
-                        nobis rem odit ad cum veniam commodi ullam voluptate alias libero elit. Facere a enim
-                        perspiciatis nobis rem odit ad cum veniam commodi ullam voluptate alias libero dolores itaque
-                        iusto obcaecati, unde fuga, ea. </p>
-                </div>
-                <div class="rowoftwo">
-                    <h2>Technology</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero elit.</p>
-                </div>
-            </div>
-            <div class="threecolumn">
-                <div class="rowofthree">
-                    <h3><i class="fa fa-wrench" aria-hidden="true"></i> Tools</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-                <div class="rowofthree">
-                    <h3><i class="fa fa-cogs" aria-hidden="true"></i> Features</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-                <div class="rowofthree">
 
-                    <h3><i class="fa fa-spin fa-inverse fa-globe" aria-hidden="true"></i> Sustainability</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-            </div>
-            <div class="projectcolumn">
-                <div class="projectrowL">
-                    <h4>What we're working on</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.<a href="#">read more</a></p>
-                </div>
-                <div class="projectrowR">
-                    <h4>In the News</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.<a href="#">read more</a></p>
-                </div>
-            </div>
-            <div class="fourcolumn">
-                <div class="rowoffour">
-                    <img src="https://static.pexels.com/photos/93019/pexels-photo-93019.jpeg" alt="City buildings">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-                <div class="rowoffour">
-                    <img src="http://maxpixel.freegreatpicture.com/static/photo/1x/World-Wide-Web-Www-Report-Internet-Magazine-1674572.jpg"
-                        alt="Annual Report">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-                <div class="rowoffour">
-                    <img src="https://static.pexels.com/photos/12598/96917deb7705adcee76b65caf8c652b1.jpg" alt="Tools">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
-                </div>
-                <div class="rowoffour">
-                    <img src="https://static.pexels.com/photos/265129/pexels-photo-265129.jpeg" alt="Clean desk">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere a enim perspiciatis nobis rem
-                        odit ad cum veniam commodi ullam voluptate alias libero dolores itaque iusto obcaecati, unde
-                        fuga, ea.</p>
+            <!-- silder-part -->
+
+            <div class="conatiner">
+                <div class="row slider">
+                    <div class="col-100">
+                        <div class="row align">
+                            <div class="col-60">
+                                <div class="progress">
+                                    <h3>Progress & Success</h3>
+                                    <h1>C U R R E N C Y</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable It
+                                        is a long established fact that a reader will be distracted by the readable </p>
+
+                                    <button>discover now</button>
+                                </div>
+                            </div>
+
+                            <div class="col-40">
+                                <div class="ban-img">
+                                    <img src="./assest/img/ban_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col_100">
+                        <div class="row align">
+                            <div class="col-60">
+                                <div class="progress">
+                                    <h3>Progress & Success</h3>
+                                    <h1>C U R R E N C Y</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable It
+                                        is
+                                        a
+                                        long established fact that a reader will be distracted by the readable </p>
+                                    <button>discover now</button>
+                                </div>
+                            </div>
+
+                            <div class="col-40">
+                                <div class="ban-img">
+                                    <img src="./assest/img/ban_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col_100">
+                        <div class="row align">
+                            <div class="col-60">
+                                <div class="progress">
+                                    <h3>Progress & Success</h3>
+                                    <h1>C U R R E N C Y</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable It
+                                        is
+                                        a
+                                        long established fact that a reader will be distracted by the readable </p>
+                                    <button>discover now</button>
+                                </div>
+                            </div>
+
+                            <div class="col-40">
+                                <div class="ban-img">
+                                    <img src="./assest/img/ban_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col_100">
+                        <div class="row align">
+                            <div class="col-60">
+                                <div class="progress">
+                                    <h3>Progress & Success</h3>
+                                    <h1>C U R R E N C Y</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable It
+                                        is
+                                        a
+                                        long established fact that a reader will be distracted by the readable </p>
+                                    <button>discover now</button>
+                                </div>
+                            </div>
+
+                            <div class="col-40">
+                                <div class="ban-img">
+                                    <img src="./assest/img/ban_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col_100">
+                        <div class="row align">
+                            <div class="col-60">
+                                <div class="progress">
+                                    <h3>Progress & Success</h3>
+                                    <h1>C U R R E N C Y</h1>
+                                    <p>It is a long established fact that a reader will be distracted by the re long
+                                        established fact that a reader will be distracted by the readable </p>
+                                </div>
+                                <button>discover now</button>
+                            </div>
+
+                            <div class="col-40">
+                                <div class="ban-img">
+                                    <img src="./assest/img/ban_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
 
-    </div>
-    <footer>
-        <p>Copyright &copy; 2017 websites</p>
+    <!-- header-end   -->
+
+    <!-- section-.about-start  -->
+    <section class="about">
+        <div class="conatiner">
+            <div class="row align">
+                <div class="col-40">
+                    <div class="about-img">
+                        <img src="./assest/img/about.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-60">
+                    <div class="about-tx">
+                        <span>ABOUT US</span>
+                        <h4>WELCOME TO OUR DEGITALEX</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section-.about-start  -->
+
+    <!-- section-1-start  (service)-->
+
+    <section class="sec-1">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col">
+                    <div class="service">
+                        <h3>services</h3>
+                        <p>CONSECTETUR ADIPISCING ELIT</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify">
+                <div class="col-20">
+                    <div class="service-img">
+                        <img src="./assest/img/services_icon1h.png" alt="">
+                    </div>
+
+                    <div class="service-tx">
+                        <h2>Safe & Secure</h2>
+                        <p> ncididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+
+                <div class="col-20">
+                    <div class="service-img">
+                        <img src="./assest/img/services_icon2h.png" alt="">
+                    </div>
+
+                    <div class="service-tx">
+                        <h2>Mobile Apps</h2>
+                        <p> ncididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+
+                <div class="col-20">
+                    <div class="service-img">
+                        <img src="./assest/img/services_icon3h.png" alt="">
+                    </div>
+
+                    <div class="service-tx">
+                        <h2> Wallet</h2>
+                        <p> ncididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+
+                <div class="col-20">
+                    <div class="service-img">
+                        <img src="./assest/img/services_icon4h.png" alt="">
+                    </div>
+
+                    <div class="service-tx">
+                        <h2>Experts Support</h2>
+                        <p> ncididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        <button>read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-1-end  (service)-->
+
+    <!-- section-2-start  (bitcoin)-->
+
+    <section class="sec-2">
+        <div class="conatiner">
+            <div class="row align">
+                <div class="col-100">
+                    <div class="bitcoin">
+                        <p>BUY AND SELL BITCOINS</p>
+                        <h2> WHY ARE SO MANY PEOPLE INVESTING IN</h2>
+                        <h2>DIGITAL</h2>
+                    </div>
+
+
+                    <div class="bitcon-img">
+                        <img src="./assest/img/bitcoins.jpg" alt="">
+                    </div>
+
+
+                    <div class="btn">
+                        <button>start now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-2-end  (bitcoin)-->
+
+    <!-- ===sec-2 and sec-3 are same class-because same html==== -->
+
+    <!-- section-3- start (Wallet) -->
+
+    <section class="sec-3">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-100">
+                    <div class="bitcoin">
+                        <p>WALLET</p>
+                        <h2> A MOST POWERFUL WALLET USE THIS WALLET FOR NEXT </h2>
+                        <h2>SECURE TRANSACTION.</h2>
+                    </div>
+
+
+                    <div class="bitcon-img">
+                        <img src="./assest/img/wallet.jpg" alt="">
+                    </div>
+
+
+                    <div class="btn">
+                        <button>make wallet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-2-end  (bitcoin)-->
+
+    <!-- ===sec-2 and sec-3 are same class-because same html==== -->
+
+    <!-- section-3- end (Wallet) -->
+
+    <!-- section-4-satart (digital) -->
+    <section class="sec-4">
+        <div class="conatiner">
+            <div class="row align">
+                <div class="col">
+                    <div class="SUBSCRIBE">
+                        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                            more-or-less normal distribution of letters,</p>
+                    </div>
+                </div>
+
+                <div class="inp">
+                    <input type="text" placeholder="enter your email">
+                    <button>subscribe now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-4-end (digital) -->
+
+    <!-- section-5-start (test) -->
+
+    <section class="sec-5">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-100">
+                    <div class="test">
+                        <p>TESTIMONIAL</p>
+                        <h3>WHAT IS SAYS OUR CLIENTS</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row test-silder align">
+
+                <div class="col-100">
+                    <div class="row align">
+                        <div class="distraced">
+                            <div class="distracted-img">
+                                <img src="./assest/img/test.png" alt="">
+                                <p>DISTRACTED BY </p>
+                                <div class="bod"></div>
+                            </div>
+
+                            <div class="distracted-tx">
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-100">
+                    <div class="row align">
+                        <div class="distraced">
+                            <div class="distracted-img">
+                                <img src="./assest/img/test.png" alt="">
+                                <p>DISTRACTED BY </p>
+                                <div class="bod"></div>
+                            </div>
+
+                            <div class="distracted-tx">
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-100">
+                    <div class="row align">
+                        <div class="distraced">
+                            <div class="distracted-img">
+                                <img src="./assest/img/test.png" alt="">
+                                <p>DISTRACTED BY </p>
+                                <div class="bod"></div>
+                            </div>
+
+                            <div class="distracted-tx">
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-100">
+                    <div class="row align">
+                        <div class="distraced">
+                            <div class="distracted-img">
+                                <img src="./assest/img/test.png" alt="">
+                                <p>DISTRACTED BY </p>
+                                <div class="bod"></div>
+                            </div>
+
+                            <div class="distracted-tx">
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-5-end (test) -->
+
+    <!-- section-6 start -->
+
+    <section>
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-100">
+                    <div class="contact">
+                        <p>CONTACT US</p>
+                        <h3>REQESUTE A CALL BACK</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row align">
+                <div class="col-100">
+                    <div class="contact-tx">
+                        <input type="text" placeholder="name">
+                        <input type="text" placeholder="phone number">
+                        <input type="text" placeholder="email address">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                    </div>
+                </div>
+
+                <div class="contact-btn">
+                    <button>send</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- section-6 -end -->
+
+
+    <!-- section-7 (map) start -->
+
+    <section>
+        <div class="row">
+            <div class="col">
+                <div class="map-img">
+                    <img src="./assest/img/map-(1).png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- secvtion-7 -end (map) -->
+
+    <!-- footer-satrt -->
+    <footer class="f-bg">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-25">
+                    <div class="digitalex-img">
+                        <img src="./assest/img/loogo2.png" alt="">
+
+                        <p>reader will be distracted by the readable content of a page when looking at its layout. The
+                            point of using Lorem Ipsum is that it has a more-or-less normal di</p>
+                    </div>
+                </div>
+
+                <div class="col-25">
+                    <div class="quick-link">
+                        <h3>QUICK LINK</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-greater-than"></i>home</a></li>
+                            <li><a href="#"><i class="fa-solid fa-greater-than"></i>habout</a></li>
+                            <li><a href="#"><i class="fa-solid fa-greater-than"></i>currency</a></li>
+                            <li><a href="#"><i class="fa-solid fa-greater-than"></i>exchange</a></li>
+                            <li><a href="#"><i class="fa-solid fa-greater-than"></i>subscribe</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div class="col-25">
+                    <div class="insta">
+                        <h3>INSTAGRAM</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+
+                        <div class="icon-f">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-25">
+                    <div class="contact-f">
+                        <h3>contact us</h3>
+
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Reader will be distracted <br> by
+                                    the reada </a></li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i>demo@gmail.com</a></li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i>+01 102586954775</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
-    </div>
+
+    <!-- footer-end -->
+
+
+    <!-- silder-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+
+
+    <!-- silder-1 -->
+
+    <script>
+        $(() => {
+            var createSlick = () => {
+                let slider = $(".slider");
+
+                slider.not('.slick-initialized').slick({
+                    autoplay: true,
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 300,
+                    autoplaySpeed: 1000,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                adaptiveHeight: true,
+                            },
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            },
+                        },
+                    ],
+                });
+            }
+
+            createSlick();
+
+            $(window).on('resize orientationchange', createSlick);
+        })
+    </script>
+
+
+
+    <!-- silder-2 -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.test-silder').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                speed: 300,
+                infinite: true,
+                autoplaySpeed: 1000,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+    <!-- toggel-button -->
+
+    <script>
+        /* background-color: ; */
+        const btn = document.querySelector(".bar");
+        const navbar = document.querySelector(".main-tx");
+        // const anyone = document.querySelectorAll(".list li");
+
+
+        btn.addEventListener("click", () => {
+            // console.log("hello");
+            btn.classList.toggle("show");
+            navbar.classList.toggle("show");
+        });
+
+     
+    </script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
